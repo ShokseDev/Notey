@@ -9,4 +9,5 @@ import Foundation
 
 struct K {
 	static let cell = "NoteCell"
+	static let addNote = "addNoteSegue"
 }

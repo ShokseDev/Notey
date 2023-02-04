@@ -9,13 +9,13 @@ import UIKit
 
 class NoteListViewController: UITableViewController {
 	
-	var itemArray = ["1", "2", "3"]
-
+	var itemArray = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3"]
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 	}
-
+	
 	//MARK: - TableView DataSource Methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,14 +24,15 @@ class NoteListViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
-				let item = itemArray[indexPath.row]
-				
-				// Cell content configuration
-				var content = cell.defaultContentConfiguration()
-				content.text = item
-				cell.contentConfiguration = content
-
-				return cell
+		let item = itemArray[indexPath.row]
+		
+		// Cell content configuration
+		var content = cell.defaultContentConfiguration()
+		content.text = item
+		content.secondaryText = "Hello"
+		cell.contentConfiguration = content
+		
+		return cell
 	}
 	
 	//MARK: - TableView Delegate Methods
@@ -41,5 +42,6 @@ class NoteListViewController: UITableViewController {
 		// Removing the permanent selection of a cell
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
+	
 }
 

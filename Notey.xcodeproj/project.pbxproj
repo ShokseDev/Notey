@@ -14,6 +14,7 @@
 		E6B1A36E298DD1AE00806F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B1A36D298DD1AE00806F23 /* Assets.xcassets */; };
 		E6B1A371298DD1AE00806F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B1A36F298DD1AE00806F23 /* LaunchScreen.storyboard */; };
 		E6B1A37D298DD98100806F23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A37C298DD98100806F23 /* Constants.swift */; };
+		E6C79395298DF8CB0046F0C6 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E6B1A370298DD1AE00806F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6B1A372298DD1AE00806F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6B1A37C298DD98100806F23 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B1A368298DD19E00806F23 /* NoteListViewController.swift */,
+				E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				E6B1A369298DD19E00806F23 /* NoteListViewController.swift in Sources */,
 				E6B1A365298DD19E00806F23 /* AppDelegate.swift in Sources */,
 				E6B1A367298DD19E00806F23 /* SceneDelegate.swift in Sources */,
+				E6C79395298DF8CB0046F0C6 /* AddNoteViewController.swift in Sources */,
 				E6B1A37D298DD98100806F23 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
