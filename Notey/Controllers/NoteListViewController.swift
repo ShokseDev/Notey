@@ -67,6 +67,10 @@ class NoteListViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
+		let controller = storyboard?.instantiateViewController(identifier: K.noteController) as! SingleNoteViewController
+		controller.note = notesArray[indexPath.row]
+		navigationController?.pushViewController(controller, animated: true)
+		
 		// Removing the permanent selection of a cell
 		tableView.deselectRow(at: indexPath, animated: true)
 	}

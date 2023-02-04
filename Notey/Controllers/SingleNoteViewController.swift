@@ -17,6 +17,8 @@ class SingleNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		textView.text = note.text
+		
 		// Keyboard State Observers
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		

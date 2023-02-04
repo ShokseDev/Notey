@@ -41,9 +41,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="l67-oB-qTX" kind="show" id="FTZ-I1-knB"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,7 +63,7 @@
         <!--Single Note View Controller-->
         <scene sceneID="Muv-CU-SUD">
             <objects>
-                <viewController id="l67-oB-qTX" customClass="SingleNoteViewController" customModule="Notey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleNoteViewController" id="l67-oB-qTX" customClass="SingleNoteViewController" customModule="Notey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PoG-PP-Slv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,9 +122,6 @@
             <point key="canvasLocation" x="-86.956521739130437" y="-6.0267857142857144"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="GnY-yf-lRx"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

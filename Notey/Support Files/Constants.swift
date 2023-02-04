@@ -10,4 +10,5 @@ import Foundation
 struct K {
 	static let cell = "NoteCell"
 	static let addSegue = "addButtonPressed"
+	static let noteController = "SingleNoteViewController"
 }
