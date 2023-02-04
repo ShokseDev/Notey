@@ -131,7 +131,17 @@
                             <constraint firstItem="Jnw-eV-2Ng" firstAttribute="leading" secondItem="Ce8-I7-lzi" secondAttribute="leading" constant="20" id="u5d-MF-qcR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="2RA-p0-9vO"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="2RA-p0-9vO">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="yag-yZ-H4Q">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="l67-oB-qTX" id="eTf-FG-exc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="yag-yZ-H4Q" id="aQx-sl-un0"/>
+                        <outlet property="textView" destination="Jnw-eV-2Ng" id="tAb-85-aLt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCL-mR-tgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
