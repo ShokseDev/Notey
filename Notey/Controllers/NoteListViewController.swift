@@ -14,6 +14,23 @@ class NoteListViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		
+	}
+	
+	// Function to create a new note
+	func createNote() {
+		let note = Note()
+		note.text = "Jopa"
+		notesArray.insert(note, at: 0)
+	}
+	
+	//MARK: - Segue Methods
+	// Segue method when click on add button
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == K.addSegue {
+			createNote()
+			tableView.reloadData()
+		}
 	}
 	
 	//MARK: - TableView DataSource Methods
@@ -28,13 +45,13 @@ class NoteListViewController: UITableViewController {
 		
 		// Cell content configuration
 		var content = cell.defaultContentConfiguration()
-		content.text = item.text
+		content.text = item.title
 		content.secondaryText = item.desc
 		cell.contentConfiguration = content
 		
 		return cell
 	}
-		
+	
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
 			notesArray.remove(at: indexPath.row)

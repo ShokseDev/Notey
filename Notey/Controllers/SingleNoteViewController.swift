@@ -39,3 +39,9 @@ class SingleNoteViewController: UIViewController {
 		self.view.endEditing(true)
 	}
 }
+
+extension SingleNoteViewController: UITextViewDelegate {
+	func textViewDidEndEditing(_ textView: UITextView) {
+		
+	}
+}

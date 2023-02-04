@@ -41,6 +41,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="l67-oB-qTX" kind="show" id="FTZ-I1-knB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,7 +54,7 @@
                     <navigationItem key="navigationItem" title="My Notes" id="MTj-K1-RBj">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="v3A-q1-6qP">
                             <connections>
-                                <segue destination="l67-oB-qTX" kind="show" id="GnY-yf-lRx"/>
+                                <segue destination="l67-oB-qTX" kind="show" identifier="addButtonPressed" id="GnY-yf-lRx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,51 +62,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCx-a3-2aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="823.1884057971015" y="-6.0267857142857144"/>
-        </scene>
-        <!--Add New Note-->
-        <scene sceneID="hLC-7O-mg5">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tWY-7t-i1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="8Vz-rF-7yJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BJW-HV-mF2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TItle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXK-fN-bsu">
-                                <rect key="frame" x="20" y="48" width="374" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vny-4U-7P1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-qq-ZAn">
-                                <rect key="frame" x="20" y="98" width="374" height="764"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZJ9-D7-j2b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="PXK-fN-bsu" firstAttribute="leading" secondItem="ZJ9-D7-j2b" secondAttribute="leading" constant="20" id="Asx-Du-Qik"/>
-                            <constraint firstItem="q3K-qq-ZAn" firstAttribute="top" secondItem="PXK-fN-bsu" secondAttribute="bottom" constant="20" id="Au5-QG-qVg"/>
-                            <constraint firstItem="ZJ9-D7-j2b" firstAttribute="trailing" secondItem="PXK-fN-bsu" secondAttribute="trailing" constant="20" id="W8S-Ah-t7x"/>
-                            <constraint firstItem="ZJ9-D7-j2b" firstAttribute="trailing" secondItem="q3K-qq-ZAn" secondAttribute="trailing" constant="20" id="c9c-47-QW8"/>
-                            <constraint firstItem="q3K-qq-ZAn" firstAttribute="leading" secondItem="ZJ9-D7-j2b" secondAttribute="leading" constant="20" id="fIo-oj-uOF"/>
-                            <constraint firstItem="q3K-qq-ZAn" firstAttribute="bottom" secondItem="ZJ9-D7-j2b" secondAttribute="bottom" id="tb2-6M-5mO"/>
-                            <constraint firstItem="PXK-fN-bsu" firstAttribute="top" secondItem="ZJ9-D7-j2b" secondAttribute="top" id="uzI-XM-TfQ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add New Note" id="nh3-DU-zmh">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="deT-9S-tGA"/>
-                    </navigationItem>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="3478" y="-206"/>
         </scene>
         <!--Single Note View Controller-->
         <scene sceneID="Muv-CU-SUD">
@@ -155,6 +113,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Evy-Or-5U4">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -166,12 +125,18 @@
             <point key="canvasLocation" x="-86.956521739130437" y="-6.0267857142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GnY-yf-lRx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
