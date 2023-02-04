@@ -9,7 +9,7 @@ import UIKit
 
 class NoteListViewController: UITableViewController {
 	
-	var itemArray = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3"]
+	var notesArray: [Note] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,20 +19,31 @@ class NoteListViewController: UITableViewController {
 	//MARK: - TableView DataSource Methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return itemArray.count
+		return notesArray.count
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
-		let item = itemArray[indexPath.row]
+		let item = notesArray[indexPath.row]
 		
 		// Cell content configuration
 		var content = cell.defaultContentConfiguration()
-		content.text = item
-		content.secondaryText = "Hello"
+		content.text = item.text
+		content.secondaryText = item.desc
 		cell.contentConfiguration = content
 		
 		return cell
+	}
+		
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			notesArray.remove(at: indexPath.row)
+			tableView.deleteRows(at: [indexPath], with: .fade)
+		}
+	}
+	
+	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return true
 	}
 	
 	//MARK: - TableView Delegate Methods

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notey-->
+        <!--My Notes-->
         <scene sceneID="xVZ-5v-yFu">
             <objects>
                 <tableViewController id="UIY-aY-rS0" customClass="NoteListViewController" customModule="Notey" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,10 +48,10 @@
                             <outlet property="delegate" destination="UIY-aY-rS0" id="yju-xd-CEz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notey" id="MTj-K1-RBj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v3A-q1-6qP">
+                    <navigationItem key="navigationItem" title="My Notes" id="MTj-K1-RBj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="v3A-q1-6qP">
                             <connections>
-                                <segue destination="8Vz-rF-7yJ" kind="show" id="0dQ-Q1-04L"/>
+                                <segue destination="l67-oB-qTX" kind="show" id="GnY-yf-lRx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,13 +63,14 @@
         <!--Add New Note-->
         <scene sceneID="hLC-7O-mg5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWY-7t-i1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="8Vz-rF-7yJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BJW-HV-mF2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TItle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXK-fN-bsu">
-                                <rect key="frame" x="20" y="144" width="374" height="30"/>
+                                <rect key="frame" x="20" y="48" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vny-4U-7P1"/>
                                 </constraints>
@@ -77,9 +78,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-qq-ZAn">
-                                <rect key="frame" x="20" y="194" width="374" height="668"/>
+                                <rect key="frame" x="20" y="98" width="374" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -101,9 +102,40 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="deT-9S-tGA"/>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tWY-7t-i1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-6"/>
+            <point key="canvasLocation" x="3478" y="-206"/>
+        </scene>
+        <!--Single Note View Controller-->
+        <scene sceneID="Muv-CU-SUD">
+            <objects>
+                <viewController id="l67-oB-qTX" customClass="SingleNoteViewController" customModule="Notey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PoG-PP-Slv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnw-eV-2Ng">
+                                <rect key="frame" x="20" y="92" width="374" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ce8-I7-lzi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jnw-eV-2Ng" firstAttribute="bottom" secondItem="Ce8-I7-lzi" secondAttribute="bottom" id="RXJ-OA-KnO"/>
+                            <constraint firstItem="Ce8-I7-lzi" firstAttribute="trailing" secondItem="Jnw-eV-2Ng" secondAttribute="trailing" constant="20" id="Yku-wP-VVy"/>
+                            <constraint firstItem="Jnw-eV-2Ng" firstAttribute="top" secondItem="Ce8-I7-lzi" secondAttribute="top" id="cf1-gn-LwW"/>
+                            <constraint firstItem="Jnw-eV-2Ng" firstAttribute="leading" secondItem="Ce8-I7-lzi" secondAttribute="leading" constant="20" id="u5d-MF-qcR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="2RA-p0-9vO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCL-mR-tgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="-6"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KzD-Nm-x1x">
@@ -116,7 +148,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="UIY-aY-rS0" kind="relationship" relationship="rootViewController" id="zqu-RH-FdP"/>
+                        <segue destination="UIY-aY-rS0" kind="relationship" relationship="rootViewController" id="pGV-M8-bFJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuy-Qw-wp5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
