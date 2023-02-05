@@ -17,6 +17,7 @@
 		E6C79395298DF8CB0046F0C6 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */; };
 		E6C79397298E0A690046F0C6 /* SingleNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C79396298E0A690046F0C6 /* SingleNoteViewController.swift */; };
 		E6C7939D298EB9DD0046F0C6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C7939C298EB9DD0046F0C6 /* Note.swift */; };
+		E6C793A1298F472F0046F0C6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C793A0298F472F0046F0C6 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		E6C79396298E0A690046F0C6 /* SingleNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleNoteViewController.swift; sourceTree = "<group>"; };
 		E6C7939C298EB9DD0046F0C6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E6C793A0298F472F0046F0C6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B1A37B298DD47600806F23 /* App Files */,
+				E6C793A2298F47360046F0C6 /* Extensions */,
 				E6C7939B298EA31A0046F0C6 /* Models */,
 				E6B1A379298DD41900806F23 /* Views */,
 				E6B1A378298DD40800806F23 /* Controllers */,
@@ -117,6 +120,14 @@
 				E6C7939C298EB9DD0046F0C6 /* Note.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E6C793A2298F47360046F0C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6C793A0298F472F0046F0C6 /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				E6C79397298E0A690046F0C6 /* SingleNoteViewController.swift in Sources */,
 				E6B1A369298DD19E00806F23 /* NoteListViewController.swift in Sources */,
 				E6C7939D298EB9DD0046F0C6 /* Note.swift in Sources */,
+				E6C793A1298F472F0046F0C6 /* Date.swift in Sources */,
 				E6B1A365298DD19E00806F23 /* AppDelegate.swift in Sources */,
 				E6B1A367298DD19E00806F23 /* SceneDelegate.swift in Sources */,
 				E6C79395298DF8CB0046F0C6 /* AddNoteViewController.swift in Sources */,

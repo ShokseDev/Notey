@@ -9,21 +9,29 @@ import UIKit
 
 class SingleNoteViewController: UIViewController {
 	
-	var note = Note()
+	var note: Note!
 	var delegate: NoteListDelegate!
 	
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var doneButton: UIBarButtonItem!
+	@IBOutlet weak var timeStampLabel: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		timeStampLabel.text = note.timeStamp.format()
 		textView.text = note.text
 		
 		// Keyboard State Observers
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		// Immediate appearance of the keyboard after loading the screen
+		textView.becomeFirstResponder()
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -36,6 +44,7 @@ class SingleNoteViewController: UIViewController {
 			} else {
 				// Saving note when the back button is pressed && textView is not empty
 				note.text = textView.text
+				note.timeStamp = Date()
 				delegate.updateNote()
 			}
 			

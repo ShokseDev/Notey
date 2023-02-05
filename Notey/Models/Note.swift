@@ -11,6 +11,7 @@ class Note {
 	
 	let id = UUID()
 	var text: String = ""
+	var timeStamp = Date()
 	
 	// The first sentence in the text becomes title
 	var title: String {
@@ -21,7 +22,7 @@ class Note {
 	var desc: String {
 		var allText =  text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
 		allText.removeFirst()
-		return allText.first ?? "No extra text"
+		return "\(timeStamp.format()) \(allText.first ?? "No Extra Text")"
 	}
 	
 }

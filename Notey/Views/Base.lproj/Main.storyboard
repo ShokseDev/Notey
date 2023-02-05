@@ -69,21 +69,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnw-eV-2Ng">
-                                <rect key="frame" x="20" y="92" width="374" height="770"/>
+                                <rect key="frame" x="20" y="106.5" width="374" height="755.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Stamp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-ol-PhZ">
+                                <rect key="frame" x="0.0" y="92" width="414" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ce8-I7-lzi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hOO-ol-PhZ" firstAttribute="trailing" secondItem="Ce8-I7-lzi" secondAttribute="trailing" id="NGC-NB-OBW"/>
+                            <constraint firstItem="Jnw-eV-2Ng" firstAttribute="top" secondItem="hOO-ol-PhZ" secondAttribute="bottom" id="PEo-d6-0cd"/>
                             <constraint firstItem="Jnw-eV-2Ng" firstAttribute="bottom" secondItem="Ce8-I7-lzi" secondAttribute="bottom" id="RXJ-OA-KnO"/>
                             <constraint firstItem="Ce8-I7-lzi" firstAttribute="trailing" secondItem="Jnw-eV-2Ng" secondAttribute="trailing" constant="20" id="Yku-wP-VVy"/>
-                            <constraint firstItem="Jnw-eV-2Ng" firstAttribute="top" secondItem="Ce8-I7-lzi" secondAttribute="top" id="cf1-gn-LwW"/>
+                            <constraint firstItem="hOO-ol-PhZ" firstAttribute="leading" secondItem="Ce8-I7-lzi" secondAttribute="leading" id="eQi-UD-zSL"/>
                             <constraint firstItem="Jnw-eV-2Ng" firstAttribute="leading" secondItem="Ce8-I7-lzi" secondAttribute="leading" constant="20" id="u5d-MF-qcR"/>
+                            <constraint firstItem="hOO-ol-PhZ" firstAttribute="top" secondItem="Ce8-I7-lzi" secondAttribute="top" id="ypT-NY-Ab5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="2RA-p0-9vO">
@@ -96,11 +105,12 @@
                     <connections>
                         <outlet property="doneButton" destination="yag-yZ-H4Q" id="aQx-sl-un0"/>
                         <outlet property="textView" destination="Jnw-eV-2Ng" id="tAb-85-aLt"/>
+                        <outlet property="timeStampLabel" destination="hOO-ol-PhZ" id="zVB-JS-7JE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCL-mR-tgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="-6"/>
+            <point key="canvasLocation" x="1824.6376811594205" y="-6.0267857142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KzD-Nm-x1x">
@@ -123,8 +133,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
