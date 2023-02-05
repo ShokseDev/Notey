@@ -26,21 +26,38 @@ class SingleNoteViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
 	
-	// If the keyboard appears, then the button is available
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+
+		if self.isMovingFromParent {
+			if textView.text.isEmpty == true {
+				// Delete note when the back button is pressed && textView is empty
+				delegate.deleteNote(id: note.id)
+			} else {
+				// Saving note when the back button is pressed && textView is not empty
+				note.text = textView.text
+				delegate.updateNote()
+			}
+			
+		}
+	}
+	
+	
 	@objc func keyboardWillShow(_ notification: NSNotification) {
+		// If the keyboard appears, then the done button is available
 		doneButton.isEnabled = true
 	}
 	
-	// If the keyboard is gone, then the button is not available
+	
 	@objc func keyboardWillHide(_ notification: NSNotification) {
+		// If the keyboard is gone, then the done button is not available
 		doneButton.isEnabled = false
 	}
 	
 	
-	// Disabling the keyboard when the done button is clicked
 	@IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+		// Disabling the keyboard when the done button is clicked
 		self.view.endEditing(true)
-		note.text = textView.text
-		delegate.updateNote()
 	}
 }
+

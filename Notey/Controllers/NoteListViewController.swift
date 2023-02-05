@@ -9,6 +9,7 @@ import UIKit
 
 protocol NoteListDelegate {
 	func updateNote()
+	func deleteNote(id: UUID)
 }
 
 class NoteListViewController: UITableViewController {
@@ -21,28 +22,22 @@ class NoteListViewController: UITableViewController {
 		
 	}
 	
-	// Function to create a new note
-//	func createNote() {
-//		let note = Note()
-//		note.text = "Jopa"
-//		notesArray.insert(note, at: 0)
-//	}
 	
 	//MARK: - Segue Methods
 	// Segue method when click on add button
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == K.addSegue {
+			// Create a new note
 			let note = Note()
 			let destinationVC = segue.destination as! SingleNoteViewController
 			destinationVC.note = note
 			destinationVC.delegate = self
 			notesArray.insert(note, at: 0)
-			tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
 			tableView.reloadData()
 		}
 	}
 	
-	//MARK: - TableView DataSource Methods
+	//MARK: - TableViewDataSource Methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return notesArray.count
@@ -72,7 +67,7 @@ class NoteListViewController: UITableViewController {
 		return true
 	}
 	
-	//MARK: - TableView Delegate Methods
+	//MARK: - TableViewDelegate Methods
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
@@ -87,9 +82,17 @@ class NoteListViewController: UITableViewController {
 	
 }
 
+//MARK: - NoteListDelegate Methods
 extension NoteListViewController: NoteListDelegate {
 	
 	func updateNote() {
+		tableView.reloadData()
+	}
+	
+	func deleteNote(id: UUID) {
+		let row = Int(notesArray.firstIndex(where: { $0.id == id }) ?? 0)
+		let indexPath = IndexPath(row: row, section: 0)
+		notesArray.remove(at: indexPath.row)
 		tableView.reloadData()
 	}
 	

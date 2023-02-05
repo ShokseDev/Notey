@@ -8,6 +8,8 @@
 import Foundation
 
 class Note {
+	
+	let id = UUID()
 	var text: String = ""
 	
 	// The first sentence in the text becomes title
