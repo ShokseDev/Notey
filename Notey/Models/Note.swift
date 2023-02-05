@@ -8,7 +8,7 @@
 import Foundation
 
 class Note {
-	var text: String! 
+	var text: String = ""
 	
 	// The first sentence in the text becomes title
 	var title: String {

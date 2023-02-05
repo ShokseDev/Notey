@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NoteListDelegate {
+	func updateNote()
+}
+
 class NoteListViewController: UITableViewController {
 	
 	var notesArray: [Note] = []
@@ -18,17 +22,22 @@ class NoteListViewController: UITableViewController {
 	}
 	
 	// Function to create a new note
-	func createNote() {
-		let note = Note()
-		note.text = "Jopa"
-		notesArray.insert(note, at: 0)
-	}
+//	func createNote() {
+//		let note = Note()
+//		note.text = "Jopa"
+//		notesArray.insert(note, at: 0)
+//	}
 	
 	//MARK: - Segue Methods
 	// Segue method when click on add button
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == K.addSegue {
-			createNote()
+			let note = Note()
+			let destinationVC = segue.destination as! SingleNoteViewController
+			destinationVC.note = note
+			destinationVC.delegate = self
+			notesArray.insert(note, at: 0)
+			tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
 			tableView.reloadData()
 		}
 	}
@@ -67,9 +76,10 @@ class NoteListViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
-		let controller = storyboard?.instantiateViewController(identifier: K.noteController) as! SingleNoteViewController
-		controller.note = notesArray[indexPath.row]
-		navigationController?.pushViewController(controller, animated: true)
+		let destinationVC = storyboard?.instantiateViewController(identifier: K.noteController) as! SingleNoteViewController
+		destinationVC.note = notesArray[indexPath.row]
+		destinationVC.delegate = self
+		navigationController?.pushViewController(destinationVC, animated: true)
 		
 		// Removing the permanent selection of a cell
 		tableView.deselectRow(at: indexPath, animated: true)
@@ -77,3 +87,10 @@ class NoteListViewController: UITableViewController {
 	
 }
 
+extension NoteListViewController: NoteListDelegate {
+	
+	func updateNote() {
+		tableView.reloadData()
+	}
+	
+}

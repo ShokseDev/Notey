@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" title="My Notes" id="MTj-K1-RBj">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="v3A-q1-6qP">
                             <connections>
-                                <segue destination="l67-oB-qTX" kind="show" identifier="addButtonPressed" id="GnY-yf-lRx"/>
+                                <segue destination="l67-oB-qTX" kind="show" identifier="addButtonPressed" id="ZiQ-7T-y7d"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

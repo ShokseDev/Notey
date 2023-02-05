@@ -16,7 +16,6 @@
 		E6B1A37D298DD98100806F23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A37C298DD98100806F23 /* Constants.swift */; };
 		E6C79395298DF8CB0046F0C6 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */; };
 		E6C79397298E0A690046F0C6 /* SingleNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C79396298E0A690046F0C6 /* SingleNoteViewController.swift */; };
-		E6C7939A298EA30D0046F0C6 /* NotesData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6C79398298EA30D0046F0C6 /* NotesData.xcdatamodeld */; };
 		E6C7939D298EB9DD0046F0C6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C7939C298EB9DD0046F0C6 /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		E6B1A37C298DD98100806F23 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E6C79394298DF8CA0046F0C6 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		E6C79396298E0A690046F0C6 /* SingleNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleNoteViewController.swift; sourceTree = "<group>"; };
-		E6C79399298EA30D0046F0C6 /* NotesData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesData.xcdatamodel; sourceTree = "<group>"; };
 		E6C7939C298EB9DD0046F0C6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +114,6 @@
 		E6C7939B298EA31A0046F0C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E6C79398298EA30D0046F0C6 /* NotesData.xcdatamodeld */,
 				E6C7939C298EB9DD0046F0C6 /* Note.swift */,
 			);
 			path = Models;
@@ -193,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C7939A298EA30D0046F0C6 /* NotesData.xcdatamodeld in Sources */,
 				E6C79397298E0A690046F0C6 /* SingleNoteViewController.swift in Sources */,
 				E6B1A369298DD19E00806F23 /* NoteListViewController.swift in Sources */,
 				E6C7939D298EB9DD0046F0C6 /* Note.swift in Sources */,
@@ -420,19 +416,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E6C79398298EA30D0046F0C6 /* NotesData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E6C79399298EA30D0046F0C6 /* NotesData.xcdatamodel */,
-			);
-			currentVersion = E6C79399298EA30D0046F0C6 /* NotesData.xcdatamodel */;
-			path = NotesData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E6B1A359298DD19D00806F23 /* Project object */;
 }

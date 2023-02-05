@@ -10,12 +10,13 @@ import UIKit
 class SingleNoteViewController: UIViewController {
 	
 	var note = Note()
+	var delegate: NoteListDelegate!
 	
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var doneButton: UIBarButtonItem!
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
 		textView.text = note.text
 		
@@ -23,7 +24,7 @@ class SingleNoteViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
+	}
 	
 	// If the keyboard appears, then the button is available
 	@objc func keyboardWillShow(_ notification: NSNotification) {
@@ -39,11 +40,7 @@ class SingleNoteViewController: UIViewController {
 	// Disabling the keyboard when the done button is clicked
 	@IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
 		self.view.endEditing(true)
-	}
-}
-
-extension SingleNoteViewController: UITextViewDelegate {
-	func textViewDidEndEditing(_ textView: UITextView) {
-		
+		note.text = textView.text
+		delegate.updateNote()
 	}
 }
