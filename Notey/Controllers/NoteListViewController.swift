@@ -19,7 +19,7 @@ class NoteListViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		
+		notesArray = CoreDataManager.shared.fetch()
 	}
 	
 	
@@ -28,12 +28,13 @@ class NoteListViewController: UITableViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == K.addSegue {
 			// Create a new note
-			let note = Note()
+			let note = CoreDataManager.shared.createNote()
 			let destinationVC = segue.destination as! SingleNoteViewController
+			// Immediate appearance of the keyboard
+			destinationVC.becomeFirstResponder()
 			destinationVC.note = note
 			destinationVC.delegate = self
 			notesArray.insert(note, at: 0)
-			tableView.reloadData()
 		}
 	}
 	

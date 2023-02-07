@@ -28,15 +28,9 @@ class SingleNoteViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
 	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		// Immediate appearance of the keyboard after loading the screen
-		textView.becomeFirstResponder()
-	}
-	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-
+		
 		if self.isMovingFromParent {
 			if textView.text.isEmpty == true {
 				// Delete note when the back button is pressed && textView is empty

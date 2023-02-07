@@ -1,18 +1,17 @@
 //
-//  Note.swift
+//  Note+CoreDataClass.swift
 //  Notey
 //
-//  Created by Daniil Aleshchenko on 04.02.2023.
+//  Created by Daniil Aleshchenko on 07.02.2023.
+//
 //
 
 import Foundation
+import CoreData
 
-class Note {
-	
-	let id = UUID()
-	var text: String = ""
-	var timeStamp = Date()
-	
+@objc(Note)
+public class Note: NSManagedObject {
+		
 	// The first sentence in the text becomes title
 	var title: String {
 		return text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines).first ?? ""
@@ -24,5 +23,5 @@ class Note {
 		allText.removeFirst()
 		return "\(timeStamp.format()) \(allText.first ?? "No Extra Text")"
 	}
-	
+
 }
