@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  Notey
 //
-//  Created by Daniil Aleshchenko on 07.02.2023.
+//  Created by Daniil Aleshchenko on 09.02.2023.
 //
 //
 

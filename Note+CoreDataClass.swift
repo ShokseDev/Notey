@@ -2,7 +2,7 @@
 //  Note+CoreDataClass.swift
 //  Notey
 //
-//  Created by Daniil Aleshchenko on 07.02.2023.
+//  Created by Daniil Aleshchenko on 09.02.2023.
 //
 //
 
@@ -11,7 +11,7 @@ import CoreData
 
 @objc(Note)
 public class Note: NSManagedObject {
-		
+	
 	// The first sentence in the text becomes title
 	var title: String {
 		return text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines).first ?? ""
