@@ -3,6 +3,6 @@
     <entity name="Note" representedClassName="Note" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="text" optional="YES" attributeType="String"/>
-        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
 </model>

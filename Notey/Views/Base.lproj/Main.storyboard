@@ -89,28 +89,13 @@
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jnw-eV-2Ng">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnw-eV-2Ng">
                                 <rect key="frame" x="20" y="106.5" width="374" height="755.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Title 
-</string>
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Description                              ">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Cursus in hac habitasse platea dictumst quisque sagittis purus.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -136,7 +121,8 @@
                     <connections>
                         <outlet property="doneButton" destination="yag-yZ-H4Q" id="aQx-sl-un0"/>
                         <outlet property="textView" destination="Jnw-eV-2Ng" id="tAb-85-aLt"/>
-                        <outlet property="timeStampLabel" destination="hOO-ol-PhZ" id="zVB-JS-7JE"/>
+                        <outlet property="textViewBottomConstraint" destination="RXJ-OA-KnO" id="Slk-cX-6bT"/>
+                        <outlet property="updateTimeLabel" destination="hOO-ol-PhZ" id="zVB-JS-7JE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCL-mR-tgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

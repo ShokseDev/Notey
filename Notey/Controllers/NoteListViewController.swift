@@ -34,8 +34,6 @@ class NoteListViewController: UITableViewController {
 			// Create a new note
 			let note = CoreDataManager.shared.createNote()
 			let destinationVC = segue.destination as! SingleNoteViewController
-			// Immediate appearance of the keyboard
-			destinationVC.becomeFirstResponder()
 			destinationVC.note = note
 			destinationVC.delegate = self
 			notesArray.insert(note, at: 0)

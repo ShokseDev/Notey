@@ -18,7 +18,7 @@ extension Note {
 
     @NSManaged public var id: UUID!
     @NSManaged public var text: String!
-    @NSManaged public var timeStamp: Date!
+    @NSManaged public var updateTime: Date!
 
 }
 

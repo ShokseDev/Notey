@@ -21,7 +21,7 @@ public class Note: NSManagedObject {
 	var desc: String {
 		var allText =  text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
 		allText.removeFirst()
-		return "\(timeStamp.format()) \(allText.first ?? "No Extra Text")"
+		return "\(updateTime.format()) \(allText.first ?? "No Extra Text")"
 	}
 
 }

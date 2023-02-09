@@ -27,7 +27,7 @@ class CoreDataManager {
 		// Recreate note values because it is unwrapped in model
 		note.id = UUID()
 		note.text = ""
-		note.timeStamp = Date()
+		note.updateTime = Date()
 		return note
 	}
 	
@@ -54,7 +54,7 @@ class CoreDataManager {
 	func fetch() -> [Note] {
 		let request: NSFetchRequest<Note> = Note.fetchRequest()
 		// Sorting notes by timestamp
-		let sortDescriptor = NSSortDescriptor(keyPath: \Note.timeStamp, ascending: false)
+		let sortDescriptor = NSSortDescriptor(keyPath: \Note.updateTime, ascending: false)
 		request.sortDescriptors = [sortDescriptor]
 		return (try? viewContext.fetch(request)) ?? []
 	}
