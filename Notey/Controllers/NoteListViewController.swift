@@ -19,6 +19,10 @@ class NoteListViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		notesArray = CoreDataManager.shared.fetch()
 	}
 	
@@ -45,20 +49,15 @@ class NoteListViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
-		let item = notesArray[indexPath.row]
-		
-		// Cell content configuration
-		var content = cell.defaultContentConfiguration()
-		content.text = item.title
-		content.secondaryText = item.desc
-		cell.contentConfiguration = content
-		
+		let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath) as! NoteListTableViewCell
+		let note = notesArray[indexPath.row]
+		cell.setupNote(note)
 		return cell
 	}
 	
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
+			CoreDataManager.shared.delete(note: notesArray[indexPath.row])
 			notesArray.remove(at: indexPath.row)
 			tableView.deleteRows(at: [indexPath], with: .fade)
 		}

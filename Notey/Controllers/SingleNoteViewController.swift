@@ -35,10 +35,12 @@ class SingleNoteViewController: UIViewController {
 			if textView.text.isEmpty == true {
 				// Delete note when the back button is pressed && textView is empty
 				delegate.deleteNote(id: note.id)
+				CoreDataManager.shared.delete(note: note)
 			} else {
 				// Saving note when the back button is pressed && textView is not empty
 				note.text = textView.text
 				note.timeStamp = Date()
+				CoreDataManager.shared.save()
 				delegate.updateNote()
 			}
 			
@@ -61,6 +63,7 @@ class SingleNoteViewController: UIViewController {
 	@IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
 		// Disabling the keyboard when the done button is clicked
 		self.view.endEditing(true)
+		timeStampLabel.text = Date().format()
 	}
 }
 

@@ -10,12 +10,16 @@ import CoreData
 
 class CoreDataManager {
 	
-	// Create a singleton
-	static let shared = CoreDataManager(model: K.modelName)
-	
 	let container: NSPersistentContainer
 	var viewContext: NSManagedObjectContext {
 		return container.viewContext
+	}
+	
+	// Create a singleton
+	static let shared = CoreDataManager(model: K.modelName)
+	
+	init(model: String) {
+		container = NSPersistentContainer(name: K.modelName)
 	}
 	
 	func createNote() -> Note {
@@ -24,7 +28,6 @@ class CoreDataManager {
 		note.id = UUID()
 		note.text = ""
 		note.timeStamp = Date()
-		save()
 		return note
 	}
 	
@@ -56,7 +59,9 @@ class CoreDataManager {
 		return (try? viewContext.fetch(request)) ?? []
 	}
 	
-	init(model: String) {
-		container = NSPersistentContainer(name: K.modelName)
+	func delete(note: Note) {
+		viewContext.delete(note)
+		save()
 	}
+	
 }
